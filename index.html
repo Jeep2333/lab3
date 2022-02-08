@@ -1,0 +1,81 @@
+/*
+  Modified from source code from 
+  https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module1-Survey
+*/
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
+	<link href="style.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire</title>
+  </head>
+  
+  <body>
+	<h1>Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+	<! Choose a website to evaluate >
+	
+	<h2>What do you think of the UI in this <a href="https://www.youtube.com">Youtube</a> site?</h2>	
+	<br>
+	<br>
+
+	<img src="a.JPG" alt = "https://www.youtube.com" width="1300" height="800">
+	<br>
+	<br>
+	<div class="question">
+	<h2> Personal Information </h2>
+	<p>First name: <input type="text" name="firstname"></p>
+	<p>Last name: <input type="text" name="lastname"></p>
+	<br>
+	<br>
+		
+	</div>	
+		
+	<div class="question">
+		<h2> What you like about the our website </h2>
+		I like:<br>
+		<input type="checkbox" name="webpage" value="Content">Content<br>
+		<input type="checkbox" name="webpage" value="Layout">Layout<br>
+		<input type="checkbox" name="webpage" value="Easy to use">Blue<br>
+		
+		<br>
+		<h2> How is your user experience </h2>
+		I find this webpage to be:<br>
+		<input type="radio" name="experience" value="Pleasant">Pleasant<br>
+		<input type="radio" name="experience" value="Generally satisfiable">Generally satisfiable<br>
+		<input type="radio" name="experience" value="Bad">Bad<br>
+		<input type="radio" name="experience" value="Terrible">Terrible<br>
+		
+		<br>
+		<h2> What is your favorite channel type?</h2><br>
+		<select id="favorite">
+			<option value="Sports" selected="selected">Sports</option>
+			<option value="Animals and Pets">Animals and Pets</option>
+			<option value="Musics">Musics</option>
+			<option value="Fashion">Fashion</option>
+			<option value="Highlight Films">Highlight Films</option>
+		</select>
+	</div>
+	
+	<br>
+	<br>
+		
+	<h3>More Comments:</h3><br>
+	<textarea rows="5" cols="170"></textarea>
+			
+	<br>
+	<br>
+			
+	<button id="submitButton" type="button" class="block">
+		SUBMIT your questionnaire
+	</button>
+		
+	<p id="signature">Site created by Group 11</p>	
+	
+	</form>
+  </body>
+</html> 
