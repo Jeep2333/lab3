@@ -229,5 +229,14 @@ function getTotalPrice(chosenProducts) {
 	}
 	return totalPrice;
 }
-var result= restrictListProducts(products,"VegetarianO");
-console.log(result);
+
+function getPrice(chosenProducts) {
+	
+	for (let i=0; i<products.length; i+=1) {
+		if (chosenProducts.indexOf(products[i].name) > -1){
+			return products[i].price;
+		}
+	}
+	return 0;
+}
+
