@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp-->
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Eleven Store</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+<h1>Welcome to Eleven Store</h1>
+<br>
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+  <p>What is your Diet Preference</p>
+	<select class = "diet-Select" id="dietSelect" name="dietSelect" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit'); populateListProductChoicesVeg(this.id, 'displayProductVeggi');populateListProductChoicesMeat(this.id, 'displayProductMeat');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesDairy(this.id, 'displayProductDairy'); populateListProductChoicesEgg(this.id, 'displayProductEgg');">
+	  <option value="" id=""></option>
+	  <option value="VegetarianO" id="VegetarianO">Vegetarian, and Organic Food</option>
+	  <option value="VegetarianN" id="VegetarianN">Vegetarian, and Non-Organic Food</option>
+    <option value="GlutenFreeO" id="GlutenFreeO">GlutenFree, and Organic Food</option>
+    <option value="GlutenFreeN" id="GlutenFreeN">GlutenFree, and Non-Organic Food</option>
+    <option value="BothO" id="BothO">Both, and Organic Food</option>
+    <option value="BothN" id="BothN">Both, and Non-Organic Food</option>
+    <option value="NoneO" id="NoneO">None, and Organic Food</option>
+    <option value="NoneN" id="NoneN">None, and Non-Organic Food</option>
+	</select>
+
+  <p></p>
+	<button class="button" onclick="openInfo(event, 'Products')">See the Products</button>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your preferences.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+   <p></p>
+   <div class="tab">
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct1')">Fruit</button>
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct2')">Veggitable</button>
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct3')">Meat</button>
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct4')">Bakery</button>
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct5')">Dairy</button>
+     <button class="tablinks_2" onclick="openInfo_2(event, 'displayProduct6')">Egg</button>
+   </div>
+
+   <div id="displayProduct1" class="tabcontent_2">
+     <div id="displayProductFruit"></div>
+   </div>
+
+   <div id="displayProduct2" class="tabcontent_2">
+     <div id="displayProductVeggi"></div>
+   </div>
+
+   <div id="displayProduct3" class="tabcontent_2">
+     <div id="displayProductMeat"></div>
+   </div>
+
+   <div id="displayProduct4" class="tabcontent_2">
+     <div id="displayProductBakery"></div>
+   </div>
+
+   <div id="displayProduct5" class="tabcontent_2">
+     <div id="displayProductDairy"></div>
+   </div>
+   <div id="displayProduct6" class="tabcontent_2">
+     <div id="displayProductEgg"></div>
+   </div>
+
+	 <button id="addCart" type="button" class="button" onclick="selectedItems()"; onclick="addCart()"  >
+
+		Add selected items to cart.
+	</button>
+    <button class="button" onclick="openInfo(event, 'Cart')">See the cart</button>
+
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+
+</div>
+
+<script src="groceries.js"></script>
+<script src="main.js"></script>
+
+<h3>
+  <footer class="sig">Site designed by group 11</footer>
+</h3>
+
+</body>
+</html>
